@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>QChat</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="logo-cont">
+                <div id="logo"><span>Qchat</span></div>
+            </div>
+
+            <div id="profile-cont">
+                <div style="place-content: center;"><div id="profile"><span>P</span></div></div>
+                <div id="nav">
+                   <div id="ham">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                   </div>
+                          
+                    
+                       
+                    <ul class="menu">
+                     <li style="display: flex; gap: 10px; place-content: center; justify-content: space-between;"><img src="../icons/chat.svg" width="30px" height="30px"  ><span style="padding: 5px;">Chats</span></li>
+                     <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="../icons/contacts.svg" width="30px" height="30px"  ><span style="padding: 5px;">Contacts</span></li>
+                     <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="../icons/setting.svg" width="30px" height="30px"  ><span style="padding: 5px;">Settings</span></li>
+                     <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="../icons/help.svg" width="30px" height="30px"  ><span style="padding: 5px;">help?</span></li>
+                    
+                 </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <div id="content-cont">
+           
+            <div id="sidebar">
+                <div>
+                <ul >
+                  <li class="list-chat"><img src="../icons/chat.svg" width="30px" height="30px" ><span class="floating">Chats</span></li>
+                   <li class="list-chat"><img src="../icons/contacts.svg" width="30px" height="30px"><span class="floating">Contacts</span></li>
+                </ul>
+                </div>
+                   <div>
+                <ul>
+                   
+                    <li class="list-chat"><img src="../icons/setting.svg" width="30px" height="30px"><span class="floating">Settings</span></li>
+                     <li class="list-chat"><img src="../icons/help.svg" width="30px" height="30px"><span class="floating">Help?</span></li>
+                </ul>
+                </div>
+               
+            </div>
+
+
+        <div id="content">
+   
+
+    <div id="list"><div id="list-contact" class="chat-contact" data-name="Penguin">
+        <div id="pic"><img src="../icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>penguin</span></div> 
+    </div>
+    <div id="list-contact" class="chat-contact" data-name="Dinosaur">
+        <div id="pic"><img src="../icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>Dinosaur</span></div> 
+    </div>
+    </div>
+
+      <div id="chat-intro">
+      <div>Select a contact to start chatting</div> 
+    </div>
+
+    <div id="chat-box">
+        <div id="chats-cont">
+            <div id="chat-head">
+                <div id="prof-cont"><div id="pic"><img src="../icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;"><span id="current-name">penguin</span></div> </div>
+                <div id="calling-id"><img src="../icons/call.svg" height="30px" width="30px"></div>
+           
+        </div>
+        </div>
+
+        <div id="chatbtn-cont">
+            <input type="text" placeholder="write here...." id="msginput">
+            <button id="send">send</button>
+        </div>
+    </div>
+
+    </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+    <script src="hamburger.js"></script>
+</body>
+</html>
