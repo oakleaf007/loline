@@ -8,15 +8,14 @@
 html,body{
     /* background-color: #fff; */
     height: 100%;
-    background: #060212;
+    background: #fff;
 }
 main{
    
   /* border: 5px solid #8888dd; */
     display: flex;
     flex-direction: column;
-    height: 95vh;
-    border-bottom: 2px solid #333;
+    height: 100vh;
   
 }
 
