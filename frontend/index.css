@@ -379,3 +379,47 @@ flex: 1;
         padding: 20px;
         place-content: center;
     }
+#notice{
+    display: none;
+     
+            /* padding-left: 10px; */
+            /* text-align: center; */
+}
+#back-cont{
+    display: none;
+    place-content: center;
+}
+#back-cont button{
+    background-color: #6db7b4;
+    border:none;
+    color: #fff;
+    border-radius: 16px;
+    padding: 5px;
+    transition: all 0.3s ease;  
+       
+}
+#back-cont button:hover{
+background-color: #5c9d9b;
+}
+    @media screen and (max-width:540px){
+        #chat-intro{
+            display: none;
+        }
+
+        #chat-box{
+            display: none;
+            
+        }
+        #list{
+            flex: 1;
+        }
+        #notice{
+           display: block;
+            text-align: center;
+        }
+        #back-cont{
+   
+    display:block;
+    
+}
+    }
