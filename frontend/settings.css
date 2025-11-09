@@ -1,0 +1,40 @@
+ *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+
+   
+    user-select: none;
+ }
+body{
+    background: #121212;
+    background-color: #121212;
+}
+ 
+ #options-element{
+       
+    color: #fff;
+    }
+   #options-element ul{
+    cursor: pointer;
+    text-align: left;
+    padding: 10px;
+    /* background-color: #333; */
+    /* border: 1px solid #060212; */
+    list-style: none;
+      transition: all 0.3s ease;
+   }
+  
+
+   #options-element ul:hover{
+ background-color:#5c9d9b ;
+   }
+  
+    
+    #logout{
+        place-content: center;
+       
+        transition: all 0.3s ease;
+    }

@@ -14,7 +14,7 @@
             </div>
 
             <div id="profile-cont">
-                <div style="place-content: center;"><div id="profile"><span>P</span></div></div>
+                <div style="place-content: center;"><div id="profile"><span>X</span></div></div>
                 <div id="nav">
                    <div id="ham">
                       <span></span>
@@ -27,10 +27,14 @@
                     <ul class="menu">
                      <li style="display: flex; gap: 10px; place-content: center; justify-content: space-between;"><img src="./icons/chat.svg" width="30px" height="30px"  ><span style="padding: 5px;">Chats</span></li>
                      <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/contacts.svg" width="30px" height="30px"  ><span style="padding: 5px;">Contacts</span></li>
-                     <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/setting.svg" width="30px" height="30px"  ><span style="padding: 5px;">Settings</span></li>
+                     <li id="setting2" style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/setting.svg" width="30px" height="30px"  ><span style="padding: 5px;">Settings</span></li>
                      <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/help.svg" width="30px" height="30px"  ><span style="padding: 5px;">help?</span></li>
                     
                  </ul>
+                </div>
+                <div id="nav-panel" class="nav-panel">
+                  <iframe id="nav-iframe" src="settings.html"></iframe>
+
                 </div>
             </div>
 
@@ -71,11 +75,16 @@
                    <div>
                 <ul>
                    
-                    <li class="list-chat"><img src="./icons/setting.svg" width="30px" height="30px"><span class="floating">Settings</span></li>
+                    <li class="list-chat" id="setting"><img src="./icons/setting.svg" width="30px" height="30px"><span class="floating">Settings</span></li>
                      <li class="list-chat"><img src="./icons/help.svg" width="30px" height="30px"><span class="floating">Help?</span></li>
                 </ul>
                 </div>
                
+
+                <div id="options" class="options">
+                   <iframe src="settings.html" id="iframe"></iframe>
+
+                </div>
             </div>
 
 
