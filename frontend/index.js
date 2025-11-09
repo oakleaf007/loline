@@ -15,6 +15,7 @@ btn.addEventListener("click",async()=>{
 
     chatbox.classList.remove("active");
     list.style.display="flex";
+    chatOpen=false;
 })
 
 }
@@ -25,20 +26,33 @@ btn.addEventListener("click",async()=>{
 
 e.addEventListener("click",()=>{
 chatbox.classList.add("active");
-
+chatOpen=true;
 welcome.style.display="none";
 const name = e.dataset.name;
 
 document.getElementById("current-name").textContent=name;
 
-if(screenSize.matches){
-list.style.display="none";
-}else{
-    list.style.display="flex";
-}
+
+screenLayout();
 });
 });
 
+let chatOpen = false;
+
+
+function screenLayout(){
+    if(chatOpen && screenSize.matches){
+list.style.display="none";
+}else {
+    list.style.display="flex";
+}
+
+}
+
+
+screenSize.addEventListener("change", screenLayout);
+
+screenLayout();
 
 
 
