@@ -178,7 +178,7 @@ place-content: center;
    #sidebar ul{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
    }
    #sidebar img{
     cursor: pointer;
@@ -355,8 +355,14 @@ flex: 1;
        
     }
     #sidebar{
-        display: none;
+        /* display: none; */
+    visibility: hidden;
+    width: 0;
+    
     }
+ 
+
+
     #nav{
         display: block;
     }
@@ -522,12 +528,27 @@ background-color: #5c9d9b;
     .options.active{
         display: block;
     }
-     #iframe{
+
+#close{
+    cursor: pointer;
+    place-content: center;
+    color: #fff;
+    width:25px;
+    height: 25px;
+   border-radius: 50%;
+    background-color: #6db7b4;
+    position: absolute;
+    /* padding-top: 5px; */
+    right: 10px;
+    top: 1px;
+}
+
+     /* #iframe{
    
     background: transparent;
     border: none;
     width: 100%;
-  }
+  } */
     /* mobile nav panle for settings */
     #nav-panel{
         width: 100%;
@@ -552,3 +573,39 @@ background-color: #5c9d9b;
   }
 
  
+
+  
+ #options-element{
+       padding-top:6px ;
+    color: #fff;
+    }
+   #options-element ul{
+    cursor: pointer;
+    text-align: left;
+    padding: 11px;
+    /* background-color: #333; */
+    /* border: 1px solid #060212; */
+    list-style: none;
+      transition: all 0.3s ease;
+   }
+  
+
+   #options-element ul:hover{
+ background-color:#5c9d9b ;
+   }
+  
+    
+    #logout{
+        place-content: center;
+       
+        transition: all 0.3s ease;
+    }
+    @media screen and (max-width:580px) {
+           #options{
+    
+        visibility: visible;
+        width: calc(100vw - 80px + 80px);
+        background-color: #121212;
+       
+    }
+    }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg" href="./icons/mew-favicon.svg" sizes="64x64">
     <title>QChat</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
             </div>
 
             <div id="profile-cont">
-                <div style="place-content: center;"><div id="profile"><span>X</span></div></div>
+                <div style="place-content: center;"><div id="profile"><span>O</span></div></div>
                 <div id="nav">
                    <div id="ham">
                       <span></span>
@@ -32,10 +33,10 @@
                     
                  </ul>
                 </div>
-                <div id="nav-panel" class="nav-panel">
+                <!-- <div id="nav-panel" class="nav-panel">
                   <iframe id="nav-iframe" src="settings.html"></iframe>
 
-                </div>
+                </div> -->
             </div>
 
         <div class="profile-details" >
@@ -82,8 +83,20 @@
                
 
                 <div id="options" class="options">
-                   <iframe src="settings.html" id="iframe"></iframe>
-
+                    <div id="close"><span>x</span></div>
+              <!-- <iframe src="settings.html" id="iframe"></iframe> -->
+                     <div id="options-element">
+                        <ul style="display: flex; justify-content: space-between; flex-direction: row;">
+                            <li id="option-li">Theme</li>
+                             <li id="option-toggle">Dark</li>
+                           
+                        </ul>
+                          <ul id="logout" >
+                          
+                            <li id="option-li" style="display: flex; gap: 10px;"><div><img src="./icons/logout.svg" alt="" width="20px" height="20px"></div><div>Logout</div></li>
+                           
+                        </ul>
+                    </div>
                 </div>
             </div>
 

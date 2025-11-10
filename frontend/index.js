@@ -6,7 +6,7 @@ const setting = document.getElementById("setting");
 const setting2 = document.getElementById("setting2");
 const options = document.querySelector(".options");
 
-const options2 = document.querySelector(".nav-panel");
+// const options2 = document.querySelector(".nav-panel");
 
 const list = document.getElementById("list");
 const screenSize = window.matchMedia('(max-width:540px)');
@@ -38,13 +38,24 @@ setting.addEventListener("click", async()=>{
 options.classList.toggle("active");
 })
 
-
 setting2.addEventListener("click",async()=>{
-options2.classList.toggle("active");
+options.classList.toggle("active");
 menu.classList.remove('active');
 ham2.classList.toggle('active');
-
+});
+const close = document.getElementById("close");
+close.addEventListener("click",()=>{
+    options.classList.remove('active');
 })
+
+
+
+// setting2.addEventListener("click",async()=>{
+// options2.classList.toggle("active");
+// menu.classList.remove('active');
+// ham2.classList.toggle('active');
+
+// })
 
 
  contactchat.forEach(e=>{
@@ -70,7 +81,7 @@ function screenLayout(){
 list.style.display="none";
 }else {
     list.style.display="flex";
-    options2.classList.remove("active");
+    // options2.classList.remove("active");
 }
 
 }
