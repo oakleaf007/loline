@@ -39,6 +39,9 @@ options.classList.remove("active");
  profilebox.classList.remove("active");
   contactMenu.classList.remove('active');
    helpMenu.classList.remove('active');
+   menu.classList.remove('active');
+ham2.classList.toggle('active');
+
 });
 if(btn){
 btn.addEventListener("click",async()=>{
