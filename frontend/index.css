@@ -494,9 +494,9 @@ background-color: #5c9d9b;
         /* transition: all o.3 ease; */
 
     }
-    #edit:hover{
-        /* background-color: #5c9d9b; */
-    }
+    /* #edit:hover{
+        background-color: #5c9d9b;
+    } */
     .profile-details.active{
         display: block;
     }
@@ -645,6 +645,7 @@ background-color: #5c9d9b;
     color: #fff;
     }
 #notice{
+    
     color: #fff;
 }
 
@@ -669,7 +670,10 @@ background-color: #5c9d9b;
     }
 
 
-
+#chat-notice{
+    padding: 4px;
+    display: none;
+}
 
 
 
@@ -696,6 +700,10 @@ background-color: #5c9d9b;
         width: calc(100vw - 80px + 80px);
         background-color: #121212;
         }
+        #chat-notice{
+    display: block;
+}
+
 
 
        
