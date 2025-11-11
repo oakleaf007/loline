@@ -28,11 +28,15 @@ const helpMenu = document.querySelector(".help-options");
 const chatBtn = document.getElementById("chat-btn");
 const chatBtn2 = document.getElementById("chat-btn2");
 
+const titlebar = document.querySelector("title-name");
+
 chatBtn.addEventListener("click",async()=>{
+    titlebar.textContent="Chatsxxxx";
 options.classList.remove("active");
  profilebox.classList.remove("active");
   contactMenu.classList.remove('active');
    helpMenu.classList.remove('active');
+   
 });
 chatBtn2.addEventListener("click",async()=>{
 options.classList.remove("active");
