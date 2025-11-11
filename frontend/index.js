@@ -22,8 +22,24 @@ const menu2 =document.querySelector(".menu");
 // menu.classList.toggle("active");
 // })
 
+const contactMenu = document.querySelector(".contact-options");
+const helpMenu = document.querySelector(".help-options");
 
+const chatBtn = document.getElementById("chat-btn");
+const chatBtn2 = document.getElementById("chat-btn2");
 
+chatBtn.addEventListener("click",async()=>{
+options.classList.remove("active");
+ profilebox.classList.remove("active");
+  contactMenu.classList.remove('active');
+   helpMenu.classList.remove('active');
+});
+chatBtn2.addEventListener("click",async()=>{
+options.classList.remove("active");
+ profilebox.classList.remove("active");
+  contactMenu.classList.remove('active');
+   helpMenu.classList.remove('active');
+});
 if(btn){
 btn.addEventListener("click",async()=>{
 
@@ -36,17 +52,78 @@ btn.addEventListener("click",async()=>{
 
 setting.addEventListener("click", async()=>{
 options.classList.toggle("active");
+ profilebox.classList.remove("active");
+  contactMenu.classList.remove('active');
+   helpMenu.classList.remove('active');
+
 })
 
 setting2.addEventListener("click",async()=>{
 options.classList.toggle("active");
 menu.classList.remove('active');
 ham2.classList.toggle('active');
+ profilebox.classList.remove("active");
+  contactMenu.classList.remove('active');
+
 });
-const close = document.getElementById("close");
-close.addEventListener("click",()=>{
+const closebtn = document.querySelectorAll(".close");
+
+closebtn.forEach(btn => {
+
+btn.addEventListener("click",async()=>{
     options.classList.remove('active');
+    contactMenu.classList.remove('active');
+    helpMenu.classList.remove('active');
+});
 })
+
+
+
+document.getElementById("contact-btn").addEventListener("click",()=>{
+contactMenu.classList.toggle("active");
+options.classList.remove("active");
+
+
+
+})
+document.getElementById("contact-btn2").addEventListener("click",()=>{
+contactMenu.classList.toggle("active");
+options.classList.remove("active");
+menu.classList.remove('active');
+ham2.classList.toggle('active');
+ profilebox.classList.remove("active");
+
+
+
+})
+
+
+document.getElementById("help-btn").addEventListener("click",()=>{
+contactMenu.classList.remove("active");
+options.classList.remove("active");
+helpMenu.classList.toggle("active");
+
+
+
+})
+document.getElementById("help-btn2").addEventListener("click",()=>{
+contactMenu.classList.remove("active");
+options.classList.remove("active");
+helpMenu.classList.toggle("active");
+menu.classList.remove('active');
+ham2.classList.toggle('active');
+ profilebox.classList.remove("active");
+
+
+})
+
+
+
+
+
+
+
+
 
 
 

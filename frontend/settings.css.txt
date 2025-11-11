@@ -9,7 +9,7 @@
     user-select: none;
  }
 body{
-    background: #121212;
+    /* background: #121212; */
     background-color: #121212;
 }
  

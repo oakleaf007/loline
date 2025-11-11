@@ -400,12 +400,7 @@ flex: 1;
         padding: 20px;
         place-content: center;
     }
-#notice{
-    display: none;
-     
-            /* padding-left: 10px; */
-            /* text-align: center; */
-}
+
 #back-cont{
     display: none;
     place-content: center;
@@ -519,6 +514,7 @@ background-color: #5c9d9b;
         height: 100%;
         padding-top: 20px;
         
+        
        
       
     }
@@ -529,7 +525,7 @@ background-color: #5c9d9b;
         display: block;
     }
 
-#close{
+.close{
     cursor: pointer;
     place-content: center;
     color: #fff;
@@ -541,6 +537,7 @@ background-color: #5c9d9b;
     /* padding-top: 5px; */
     right: 10px;
     top: 1px;
+    border: 2px solid #333;
 }
 
      /* #iframe{
@@ -600,12 +597,107 @@ background-color: #5c9d9b;
        
         transition: all 0.3s ease;
     }
+
+
+    #contact-options{
+        top: 0%;
+        background-color: #121212;
+        z-index: 1;
+        position: absolute;
+        left: 100%;
+        width: calc(100vw - 80px);
+        height: 100%;
+        padding-top: 20px;
+       
+    }
+    .contact-options{
+         display: none;
+    }
+    .contact-options.active{
+        display: block;
+    }
+     #list-contact2{
+      place-items: center;
+        margin: 0 auto;
+      width: 90%;
+    
+    /* border: 2px solid #4b4e6d; */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2c4d6d;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease;
+   }
+
+   #list-contact2:hover{
+    background-color: #6db7b4;
+   }
+    
+ #options-element2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+       padding-top:6px ;
+    color: #fff;
+    }
+#notice{
+    color: #fff;
+}
+
+
+
+ #help-options{
+        top: 0%;
+        background-color: #121212;
+        z-index: 1;
+        position: absolute;
+        left: 100%;
+        width: calc(100vw - 80px);
+        height: 100%;
+        padding-top: 20px;
+       
+    }
+ .help-options{
+         display: none;
+    }
+   .help-options.active{
+        display: block;
+    }
+
+
+
+
+
+
+
+
     @media screen and (max-width:580px) {
            #options{
     
         visibility: visible;
         width: calc(100vw - 80px + 80px);
         background-color: #121212;
+           }
+        #contact-options{
+            visibility: visible;
+        width: calc(100vw - 80px + 80px);
+        background-color: #121212;
+        }
+         #contact-options #list-contact{
+        margin:0px auto;
        
     }
+  #help-options{
+            visibility: visible;
+        width: calc(100vw - 80px + 80px);
+        background-color: #121212;
+        }
+
+
+       
+    
     }

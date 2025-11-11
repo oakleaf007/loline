@@ -9,6 +9,8 @@
 </head>
 <body>
     <main>
+
+        <!-- header -->
         <header>
             <div id="logo-cont">
                 <div id="logo"><span>Qchat</span></div>
@@ -26,10 +28,10 @@
                     
                        
                     <ul class="menu">
-                     <li style="display: flex; gap: 10px; place-content: center; justify-content: space-between;"><img src="./icons/chat.svg" width="30px" height="30px"  ><span style="padding: 5px;">Chats</span></li>
-                     <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/contacts.svg" width="30px" height="30px"  ><span style="padding: 5px;">Contacts</span></li>
+                     <li id="chat-btn2" style="display: flex; gap: 10px; place-content: center; justify-content: space-between;"><img src="./icons/chat.svg" width="30px" height="30px"  ><span style="padding: 5px;">Chats</span></li>
+                     <li  id="contact-btn2" style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/contacts.svg" width="30px" height="30px"  ><span style="padding: 5px;">Contacts</span></li>
                      <li id="setting2" style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/setting.svg" width="30px" height="30px"  ><span style="padding: 5px;">Settings</span></li>
-                     <li style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/help.svg" width="30px" height="30px"  ><span style="padding: 5px;">help?</span></li>
+                     <li id="help-btn2" style="display: flex; gap: 10px; place-content: center;justify-content: space-between;"><img src="./icons/help.svg" width="30px" height="30px"  ><span style="padding: 5px;">help?</span></li>
                     
                  </ul>
                 </div>
@@ -64,28 +66,33 @@
         </div>
         </header>
 
+
+<!-- all the main content inside this  after header-->
+
         <div id="content-cont">
            
             <div id="sidebar">
                 <div>
                 <ul >
-                  <li class="list-chat"><img src="./icons/chat.svg" width="30px" height="30px" ><span class="floating">Chats</span></li>
-                   <li class="list-chat"><img src="./icons/contacts.svg" width="30px" height="30px"><span class="floating">Contacts</span></li>
+                  <li class="list-chat" id="chat-btn"><img src="./icons/chat.svg" width="30px" height="30px" ><span class="floating">Chats</span></li>
+                   <li class="list-chat" id="contact-btn"><img src="./icons/contacts.svg" width="30px" height="30px"><span class="floating">Contacts</span></li>
                 </ul>
                 </div>
                    <div>
                 <ul>
                    
                     <li class="list-chat" id="setting"><img src="./icons/setting.svg" width="30px" height="30px"><span class="floating">Settings</span></li>
-                     <li class="list-chat"><img src="./icons/help.svg" width="30px" height="30px"><span class="floating">Help?</span></li>
+                     <li class="list-chat" id="help-btn"><img src="./icons/help.svg" width="30px" height="30px"><span class="floating">Help?</span></li>
                 </ul>
                 </div>
                
-
+                <!-----------------------------------------------------------  -->
+<!-- settings -->
                 <div id="options" class="options">
-                    <div id="close"><span>x</span></div>
+                    <div class="close"><span>x</span></div>
+                     <div id="notice">Settings</div>
               <!-- <iframe src="settings.html" id="iframe"></iframe> -->
-                     <div id="options-element">
+                     <div id="options-element" >
                         <ul style="display: flex; justify-content: space-between; flex-direction: row;">
                             <li id="option-li">Theme</li>
                              <li id="option-toggle">Dark</li>
@@ -98,8 +105,40 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+    <!-- contacts -->
+                <div id="contact-options" class="contact-options">
+                    
+                    <div class="close"><span>x</span></div>
+                     <div id="notice">All contacts</div>
+              <!-- <iframe src="settings.html" id="iframe"></iframe> -->
+                     <div id="options-element2">
+                       <div id="list-contact2" class="chat-contact" data-name="Penguin">
+        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>penguin</span></div> 
+                     </div>
+                      <div id="list-contact2" class="chat-contact" data-name="Penguin">
+        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>penguin</span></div> 
+                     </div>
+                     
+                     
+                    </div>
+                </div>
 
+<!-- help section -->
+                            <div id="help-options" class="help-options">
+                    
+                    <div class="close"><span>x</span></div>
+                     <div id="notice">Help?</div>
+              <!-- <iframe src="settings.html" id="iframe"></iframe> -->
+                     <div id="options-element2">
+                     xxxxxxxxxxxx
+                     
+                     
+                    </div>
+                </div>
+
+
+            </div>
+ <!-----------------------------------------------------------  -->
 
         <div id="content">
    
