@@ -67,6 +67,7 @@ menu.classList.remove('active');
 ham2.classList.toggle('active');
  profilebox.classList.remove("active");
   contactMenu.classList.remove('active');
+  helpMenu.classList.remove('active');
 
 });
 const closebtn = document.querySelectorAll(".close");
@@ -95,6 +96,7 @@ options.classList.remove("active");
 menu.classList.remove('active');
 ham2.classList.toggle('active');
  profilebox.classList.remove("active");
+ helpMenu.classList.remove('active');
 
 
 
