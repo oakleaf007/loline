@@ -17,7 +17,7 @@ html,body{
 main{
    
   /* border: 5px solid #8888dd; */
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 100vh;
   
@@ -140,7 +140,7 @@ place-content: center;
     border-radius: 50%;
     place-content: center;
     color: #fff;
-    background-color: #2c4d6d;
+    background-color: #22946e;
     transition: all 0.3s ease;
 
 
@@ -266,7 +266,7 @@ transform: translate(0, -30%);
     /* border: 2px solid #4b4e6d; */
     padding: 10px;
     border-radius: 10px;
-    background-color: #2c4d6d;
+    background-color: #22946e;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -294,7 +294,7 @@ transform: translate(0, -30%);
     /* border: 2px solid #fff; */
     padding: 10px;
     border-radius: 4px;
-    background-color:#2c4d6d;
+    background-color:#22946e;
     display: flex;
     justify-content: space-between;
 }
@@ -321,7 +321,7 @@ transform: translate(0, -30%);
    #msginput{
     min-width: 0;
     height: 40px;
-    background-color: #2c4d6d;
+    background-color: #22946e;
     color: #f6f3e9;
     padding: 10px;
     border-radius: 12px;
@@ -461,7 +461,7 @@ background-color: #5c9d9b;
         margin-top: 20px;
         margin-left: 20px;
         padding: 20px;
-        background-color: #5c9d9b;
+        background-color: #22946e;
         width: max-content;
         border-radius: 50%;
     }
@@ -576,7 +576,7 @@ background-color: #5c9d9b;
  #options-element{
        
     color: #fff;
-    background-color: #2c4d6d;
+    background-color: #22946e;
    border-radius: 4px;
     }
    #options-element ul{
@@ -612,6 +612,8 @@ background-color: #5c9d9b;
         width: calc(100vw - 80px);
         height: 100%;
         padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
        
     }
     .contact-options{
@@ -623,22 +625,32 @@ background-color: #5c9d9b;
      #list-contact2{
       place-items: center;
         margin: 0 auto;
-      width: 90%;
+      width: 100%;
+      padding-left: 10px;
     
     /* border: 2px solid #4b4e6d; */
     padding: 10px;
     border-radius: 10px;
-    background-color: #2c4d6d;
+    background-color: #22946e;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
     display: flex;
+    justify-content: space-between;
     gap: 10px;
     transition: all 0.3s ease;
    }
 
    #list-contact2:hover{
     background-color: #6db7b4;
+   }
+   .delete-btn{
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    /* background-color: #333; */
+   }
+   .delete-btn:hover{
+    background-color: #333;
    }
     
  #options-element2{

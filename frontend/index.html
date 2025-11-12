@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="icon" type="image/svg" href="./icons/mew-favicon.svg" sizes="64x64">
     <title>QChat</title>
 </head>
 <body>
-    <main>
-
+    <section id="login-screen">
+        <header>
+             <div id="logo-cont">
+                <div id="logo"><span >QChat</span></div>
+            </div>
+            <div><button id="skipbtn">Skip</button></div>
+        </header>
+        <div id="login-container">
+            <div id="form-container">
+                <form id="form">
+                    <h2>Sign in or Sign up</h2>
+                     <label for="email">Email Address:</label>
+                    <input type="email">
+                    <label for="password">Password:</label>
+                    <input type="password">
+                    <button id="submit">Continue</button>
+                </form>
+            </div>
+            
+          
+        </div>
+         <div id="footer">
+               <p>© 2025 Chatstrophe. All rights reserved.</p>
+               <br>
+                <p>QChat</p>
+            </div>
+    </section>
+    
+    <main id="main">
+        
         <!-- header -->
         <header>
+             <div><button id="skipbtn2">Skip</button></div>
             <div id="logo-cont">
                 <div id="logo"><span id="title-name">Chats</span></div>
             </div>
@@ -113,11 +143,16 @@
               <!-- <iframe src="settings.html" id="iframe"></iframe> -->
                      <div id="options-element2" >
                        <div id="list-contact2" class="chat-contact" data-name="Penguin" >
-        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>penguin</span></div> 
+        <div style="display: flex; gap: 10px;"><div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div>
+        <div style="place-content: center;" id="span-cont"><span>penguin</span></div> </div>
+        <div class="delete-btn"><img src="./icons/delete.svg" width="24px" height="24px"></div>
                      </div>
-                      <div id="list-contact2" class="chat-contact" data-name="Penguin">
-        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>penguin</span></div> 
+                     <div id="list-contact2" class="chat-contact" data-name="Penguin" >
+        <div style="display: flex; gap: 10px;"><div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div>
+        <div style="place-content: center;" id="span-cont"><span>Dinosaur</span></div> </div>
+        <div class="delete-btn"><img src="./icons/delete.svg" width="24px" height="24px"></div>
                      </div>
+                      
                      
                      
                     </div>
@@ -182,6 +217,7 @@
     <script src="profile.js"></script>
     <script src="index.js"></script>
     <script src="hamburger.js"></script>
+    <script src="loginmenu.js"></script>
     
 </body>
 </html>
