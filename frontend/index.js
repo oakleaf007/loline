@@ -75,9 +75,10 @@ ham2.classList.toggle('active');
 
 const logout = document.querySelector(".logout-btn");
 logout.addEventListener("click",()=>{
-
+options.classList.remove("active");
 document.getElementById("main").style.display="none";
 login.style.display="flex";
+
 })
 
 
