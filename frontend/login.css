@@ -22,8 +22,8 @@ h2{
 }
 #form-container{
    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
+    width: 80%;
+    max-width: 360px;
     padding: 20px;
     margin: 0 auto;
     background: #181d20;
@@ -36,13 +36,20 @@ h2{
     gap: 20px;
       
 }
-#form input{
-     box-shadow: 0 0 5px rgba(240, 248, 255, 0.3);
+input[type="email"], 
+    [type="password"], [type="text"]{
+     box-shadow: 0 0 5px rgba(153, 234, 188, 0.3);
     border-radius: 14px;
     outline: none;
     border: 2px solid #c8e6f0;
     font-size: 18px;
     padding: 10px;
+}
+input [type="checkbox"]{
+    
+ box-shadow: none;
+ border: 2px solid #47d5a6;
+  background: #007bff;
 }
 
 #form button{
@@ -54,6 +61,7 @@ h2{
     border-radius: 14px;
     transition: all 0.3s ease;
 }
+
 #form button:hover{
     cursor: pointer;
     background-color: #53c59f;

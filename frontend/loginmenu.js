@@ -16,3 +16,14 @@ document.getElementById("form").addEventListener("submit", function(e){
     document.getElementById("main").style.display="flex";
 login.style.display="none";
 })
+
+const passField = document.getElementById("password");
+
+document.getElementById("check").addEventListener("change",function(){
+    if(this.checked){
+        passField.type ="text";
+
+    }else{
+        passField.type="password";
+    }
+});

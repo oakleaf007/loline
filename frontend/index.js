@@ -51,6 +51,7 @@ if (options.classList.contains("active")) {
     }
 
 
+
  profilebox.classList.remove("active");
   contactMenu.classList.remove('active');
    helpMenu.classList.remove('active');
@@ -70,6 +71,21 @@ if (helpMenu.classList.contains("active")) {
 ham2.classList.toggle('active');
    
 });
+
+
+const logout = document.querySelector(".logout-btn");
+logout.addEventListener("click",()=>{
+
+document.getElementById("main").style.display="none";
+login.style.display="flex";
+})
+
+
+
+
+
+
+
 chatBtn2.addEventListener("click",async()=>{
 options.classList.remove("active");
 

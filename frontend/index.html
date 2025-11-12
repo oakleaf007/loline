@@ -22,8 +22,10 @@
                     <h2>Sign in or Sign up</h2>
                      <label for="email">Email Address:</label>
                     <input type="email">
-                    <label for="password">Password:</label>
-                    <input type="password">
+                    <label for="password" >Password:</label>
+                    <input type="password" id="password">
+                  
+                    <div style="display: flex; gap: 10px; padding-left:4px; min-width: 0;"><input type="checkbox" id="check">  <label for="password">Password Visibility</label></div>
                     <button id="submit" type="submit" >Continue</button>
                 </form>
             </div>
@@ -130,7 +132,7 @@
                         </ul>
                           <ul id="logout" >
                           
-                            <li id="option-li" style="display: flex; gap: 10px;"><div><img src="./icons/logout.svg" alt="" width="20px" height="20px"></div><div>Logout</div></li>
+                            <li class="logout-btn" id="option-li" style="display: flex; gap: 10px;"><div><img src="./icons/logout.svg" alt="" width="20px" height="20px"></div><div>Logout</div></li>
                            
                         </ul>
                     </div>
