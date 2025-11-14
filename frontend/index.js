@@ -51,6 +51,8 @@ if (options.classList.contains("active")) {
     }
 
 
+    ham2.classList.remove('active');
+
 
  profilebox.classList.remove("active");
   contactMenu.classList.remove('active');
@@ -66,9 +68,8 @@ if (helpMenu.classList.contains("active")) {
 
 
 
-
    menu.classList.remove('active');
-ham2.classList.toggle('active');
+
    
 });
 
