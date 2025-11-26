@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="login.css">
+     <link rel="stylesheet" href="./help.css">
     <link rel="icon" type="image/svg" href="./icons/mew-favicon.svg" sizes="64x64">
     <title>QChat</title>
 </head>
@@ -175,8 +176,43 @@
                     <div class="close"><span>x</span></div>
                      <!-- <div id="notice">Help?</div> -->
               <!-- <iframe src="settings.html" id="iframe"></iframe> -->
-                     <div id="options-element2">
-                     xxxxxxxxxxxx
+                     <div id="options-element3">
+                        
+                    <div class="help-search">
+              <input type="search" placeholder="search for questions...">
+              <br>
+              <button id="helpsearch">Search</button>
+            </div>
+       
+            <div class="faq-cont" id="cont">
+               <h2 >Frequently asked questions:</h2>
+
+            <div class="faq" id="qa">
+              <div class="qs">
+                <p class="qtext"><strong>Q:</strong> </p>
+                <span id="arrow">&#10095;</span>
+                
+              </div>
+              <div class="ans">
+                <p class="atext"><strong>A:</strong> </p>
+              </div>
+            
+             
+            </div>
+
+
+    </div>
+    <div id="post-cont">
+            <div class="post-qs">
+              <h4>Have any Question:</h4>
+              <form id="frm">
+              <textarea placeholder="write your question" id="faq-qs"></textarea><br>
+             
+              <button type="submit" >Submit</button>
+              </form>
+              <p id="msg" style="font-size: 14px;"></p>
+            </div>
+            </div>
                      
                      
                     </div>
