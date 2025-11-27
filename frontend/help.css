@@ -73,9 +73,7 @@
 .post-qs{
   padding: 10px;
 }
-.post-qs form{
- 
-}
+
 
 
 .faq{
@@ -141,12 +139,15 @@ h4{
     border-radius: 8px;
     border: 1px solid #ccc;
     resize: none;        
-     
+      margin: 5px auto;
     transition: border-color 0.2s;
   }
     textarea:focus {
     border-color: #6366f1; /* pretty focus color */
     outline: none;
+  }
+  .post-qs h4{
+    text-align: left;
   }
   .post-qs button{
     cursor: pointer;
@@ -159,4 +160,15 @@ h4{
   }
    .post-qs button:hover{
      background-color: #6366f1;
+   }
+
+   @media (max-width:480px){
+    .post-qs textarea{
+      width: 100%;
+      margin: 5px auto;
+    }
+    .post-qs{
+      text-align: right;
+    }
+
    }
