@@ -719,9 +719,11 @@ background-color: #5c9d9b;
         #chat-notice{
     display: block;
 }
-
-
-
-       
-    
+    }
+#options-element3{
+    display: block;
+   
+    gap: 10px;
+       padding-top:6px ;
+    color: #fff;
     }

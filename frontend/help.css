@@ -1,41 +1,83 @@
 .help-search{
+  display: flex;
     margin: 0 auto;
     padding: 10px;
-    text-align: center;
+    /* background-color: #374151; */
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+   
+    
+  
 
 }
+#help-container{
+  /* background-color: #6366f1; */
+  /* max-height: 100vh; */
+  margin: 0 auto;
+  max-width: 650px;
+}
 .help-search input{
-    border:1px solid #0a3a64;
+    /* border:1px solid #0a3a64; */
+    border: none;
     border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     width:90%;
     padding: 10px;
-    margin: 10px auto;
+  
+    outline: none;
+    
 }
 .help-search button{
     cursor: pointer;
     color: #fff;
     background-color: #0a3a64;
     padding:10px;
-    width: 150px;
+
     border-radius: 5px;
+     border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     border: none;
     transition: all 0.3s ease;
 }
 .help-search button:hover{
-    background-color: lightslategray;
+    background-color: #6366f1;
     color: #fff;
 }
 
 .faq-cont{
+  /* background-color: #6366f1; */
   display: block;
-    max-width: 90%;
-    margin: 10px auto;
+  width: 90%;
+    max-width: 600px;
+   padding: 10px;
+    margin: 0px auto;
+}
+.faq-cont h2{
+  text-align: left;
+  width: 90%;
+  padding: 10px;
+  font-size: 18px;
 }
 #post-cont{
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  padding: 10px;
+   /* background-color: #6366f1; */
   display: block;
-    max-width: 90%;
-    margin: 10px auto;
+  
+    margin: 0px auto;
 }
+.post-qs{
+  padding: 10px;
+}
+.post-qs form{
+ 
+}
+
+
 .faq{
   display: none;
      background: #fff;
@@ -92,9 +134,9 @@ h4{
 
   .post-qs textarea{
       width: 50%;
-    min-height: 40px;     
+    min-height: 60px;     
     max-height: 200px;    
-    padding: 12px;
+    padding: 10px;
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -112,5 +154,9 @@ h4{
     padding: 10px;
     border-radius: 5px;
     background-color: #0a3a64;
+    transition:  all 0.3s ease;
     color: #fff;
   }
+   .post-qs button:hover{
+     background-color: #6366f1;
+   }
