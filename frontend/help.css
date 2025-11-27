@@ -32,7 +32,7 @@
 .help-search button{
     cursor: pointer;
     color: #fff;
-    background-color: #0a3a64;
+    background-color: #22946e;
     padding:10px;
 
     border-radius: 5px;
@@ -153,7 +153,7 @@ h4{
     border: none;
     padding: 10px;
     border-radius: 5px;
-    background-color: #0a3a64;
+    background-color: #22946e;
     transition:  all 0.3s ease;
     color: #fff;
   }
