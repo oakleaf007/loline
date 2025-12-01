@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="login.css">
+     <link rel="stylesheet" href="./help.css">
     <link rel="icon" type="image/svg" href="./icons/mew-favicon.svg" sizes="64x64">
     <title>QChat</title>
 </head>
@@ -16,22 +17,50 @@
             </div>
             <!-- <div><button id="skipbtn">Skip</button></div> -->
         </header>
+
+
+        <!-- Login -->
         <div id="login-container">
             <div id="form-container">
                 <form id="form">
-                    <h2>Sign in or Sign up</h2>
-                     <label for="email">Email Address:</label>
-                    <input type="email">
-                    <label for="password" >Password:</label>
-                    <input type="password" id="password">
-                  
-                    <div style="display: flex; gap: 10px; padding-left:4px; min-width: 0;"><input type="checkbox" id="check">  <label for="password">Password Visibility</label></div>
+                    <h2>Welcome to Chatastrophe</h2>
+                    <h3>Sign in</h3>
+                     <!-- <label for="email" >Email Address:</label> -->
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <!-- <label for="password" >Password:</label> -->
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                     <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    
+                    <div style="display: flex; gap: 10px; padding-left:4px; min-width: 0;"><input type="checkbox"  class="check">  <label for="password">Password Visibility</label></div>
+                    <div style="text-align: center; font-size: 14px;"> <span id="msg">Event msg</span></div>
                     <button id="submit" type="submit" >Continue</button>
+
+
                 </form>
+
+               <p style="text-align: center; padding: 10px; color: #fff;">or</p>
+
+               <div id="google-cont">
+                <div id="google">   <button id="google-btn" type="submit" ><div id="google-icon"><img src="./icons/google.svg" width="16px" height="16px"><span id="google-span" >Log in with Google</span></div></button></div>
+               </div>
+               <div style=" padding: 10px; text-align: center;">
+                <span id="register" style="color:#22946e ; cursor: pointer;">Register</span>
+               </div>
             </div>
+
+<!-- sign up -->
+
             
           
         </div>
+
+
+
+
+
+
+
+
          <div id="footer">
                <p>© 2025 Chatstrophe. All rights reserved.</p>
                <br>
@@ -80,16 +109,16 @@
             <div id="profile-elements">
 
                 <ul id="profile-list">
-                    <li id="li">Name: <span>Oak</span></li><li id="edit"><img src="./icons/edit.svg" alt="" width="25px" height="25px"></li>
+                    <li id="li">Name: <span id="uname">Oak</span></li><li id="edit"><img src="./icons/edit.svg" alt="" width="25px" height="25px"></li>
                   
                 </ul>
                 
                 <ul id="profile-list">
-                    <li id="li">Username: <span>oakleaf69</span></li><li id="edit"><img src="./icons/edit.svg" alt="" width="25px" height="25px"></li>
+                    <li id="li">Username: <span id="uname2">oakleaf69</span></li><li id="edit"><img src="./icons/edit.svg" alt="" width="25px" height="25px"></li>
                   
                 </ul>
                  <ul id="profile-list">
-                    <li id="li">Email: <span>oakleaf@gmail.com</span></li><li id="edit"><img src="./icons/edit.svg" alt="" width="25px" height="25px"></li>
+                    <li id="li">Email: <span id="mail">oakleaf@gmail.com</span></li><li id="edit"><img src="./icons/edit.svg" alt="" width="25px" height="25px"></li>
                   
                 </ul>
  
@@ -166,10 +195,47 @@
                     <div class="close"><span>x</span></div>
                      <!-- <div id="notice">Help?</div> -->
               <!-- <iframe src="settings.html" id="iframe"></iframe> -->
-                     <div id="options-element2">
-                     xxxxxxxxxxxx
+                     <div id="options-element3">
+                        <div id="help-container">
+                    <div class="help-search">
+              <input type="search" placeholder="search for questions...">
+             
+              <button type="#" id="helpsearch"><img src="./icons/search.svg"  width="18px"></button>
+            </div>
+       
+            <div class="faq-cont" id="cont">
+               <h2 >Frequently asked questions:</h2>
+
+            <div class="faq" id="qa">
+              <div class="qs">
+                <p class="qtext"><strong>Q:</strong> </p>
+                <span id="arrow">&#10095;</span>
+                
+              </div>
+              <div class="ans">
+                <p class="atext"><strong>A:</strong> </p>
+              </div>
+            
+             
+            </div>
+
+
+    </div>
+    <div id="post-cont">
+            <div class="post-qs">
+              <h4>Have any Question:</h4>
+              <form id="frm">
+              <textarea placeholder="write your question" id="faq-qs"></textarea><br>
+             
+              <button type="#" >Submit</button>
+              </form>
+              <p id="msg" style="font-size: 14px;"></p>
+            </div>
+            </div>
                      
                      
+                    </div>
+
                     </div>
                 </div>
 
@@ -220,6 +286,7 @@
     <script src="index.js"></script>
     <script src="hamburger.js"></script>
     <script src="loginmenu.js"></script>
+    <script src="userLogin.js"></script>
     
 </body>
 </html>
