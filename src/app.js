@@ -1,7 +1,7 @@
 import express from "express"
-
+import "./dotenv.js";
 import cors from "cors";
-import dotenv from "dotenv";
+
 import mongoose from "mongoose";
 
 import path from "path";
@@ -9,7 +9,7 @@ import { fileURLToPath } from "url";
 
 
 
-dotenv.config();
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=> console.log("MongoDB connected via localhost"))
@@ -35,8 +35,10 @@ app.get("/", (req,res)=>{
 });
 
 import userRoutes from "./routes/userRoutes.js";
+import chatRoute from "./routes/chatRoute.js";
 
 app.use("/api", userRoutes);
+app.use("/api", chatRoute);
 
 
 export default app;

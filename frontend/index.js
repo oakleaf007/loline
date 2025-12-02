@@ -78,6 +78,7 @@ logout.addEventListener("click",()=>{
 options.classList.remove("active");
 document.getElementById("main").style.display="none";
 login.style.display="flex";
+localStorage.removeItem("user");
 
 })
 
@@ -303,6 +304,11 @@ list.style.display="none";
 }
 
 }
+
+
+
+
+
 
 
 screenSize.addEventListener("change", screenLayout);

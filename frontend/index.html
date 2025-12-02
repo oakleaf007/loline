@@ -247,14 +247,20 @@
    
 
     <div id="list">
+        <div id="list-contact" class="groq-chat" data-name="Groq">
+        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>Groq</span></div> 
+    </div>
          <!-- <div id="chat-notice">Chats</div> -->
         <div id="list-contact" class="chat-contact" data-name="Penguin">
-        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>penguin</span></div> 
+        <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>Penguin</span></div> 
     </div>
     <div id="list-contact" class="chat-contact" data-name="Dinosaur">
         <div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div><div style="place-content: center;" id="span-cont"><span>Dinosaur</span></div> 
     </div>
+
+     
     </div>
+    
 
       <div id="chat-intro">
       <div>Select a contact to start chatting</div> 
@@ -282,11 +288,29 @@
 
 
     </main>
+
+    <script>
+        window.addEventListener("load", async()=>{
+            const userInfo = JSON.parse(localStorage.getItem("user"));
+        if(userInfo){
+              document.getElementById("main").style.display="flex";
+            login.style.display="none";
+            let uemail = userInfo.email;
+        
+        document.getElementById("uname").textContent=uemail.split("@")[0];
+        document.getElementById("uname2").textContent=userInfo.email;
+        document.getElementById("mail").textContent=userInfo.email;
+        }
+        })
+        
+
+    </script>
     <script src="profile.js"></script>
     <script src="index.js"></script>
     <script src="hamburger.js"></script>
     <script src="loginmenu.js"></script>
     <script src="userLogin.js"></script>
+    <script src="chatbot.js"></script>
     
 </body>
 </html>
