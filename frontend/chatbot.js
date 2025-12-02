@@ -1,12 +1,13 @@
 
 const botContainer = document.querySelector(".groq-chat");
 
+let activeChat=null;
 botContainer.addEventListener("click",()=>{
     chatbox.classList.add("active");
     chatOpen=true;
     welcome.style.display="none";
-    botName= botContainer.dataset.name;
-    document.getElementById("current-name").textContent=botName;
+    activeChat= botContainer.dataset.name;
+    document.getElementById("current-name").textContent=activeChat;
   
 
     screenLayout();
@@ -14,7 +15,37 @@ botContainer.addEventListener("click",()=>{
 })
 
 
+const sendbtn = document.getElementById("send")
+sendbtn.addEventListener("click",()=>{
+const msgText = document.getElementById("msginput").value.trim();
+if(!msgText){
+    return;
+}
+addMsg(msgText);
 
+if(activeChat==="Groq Groq"){
+    setTimeout(()=>chatbot(msgText),2);
+  
+}
+document.getElementById("msginput").value = "";
+});
+
+
+function addMsg(text){
+    const div = document.createElement("div");
+    div.className="allmsg usermsg";
+     div.textContent = text;
+      document.getElementById("text-container").append(div);
+
+}
+
+function botMsg(text){
+    const div = document.createElement("div");
+    div.className="allmsg botmsg";
+     div.textContent = text;
+      document.getElementById("text-container").append(div);
+      
+}
 
 
 
@@ -45,6 +76,8 @@ async function chatbot(text){
 
     const data = await res.json();
  
-    console.log("Langra Penguin: ", data.reply);
+   
+
+ 
+    botMsg(data.reply);
 }
-chatbot(text);

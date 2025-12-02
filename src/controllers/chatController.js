@@ -1,4 +1,7 @@
 import Groq from "groq-sdk";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 
 const groq = new Groq({
@@ -15,7 +18,11 @@ const groq = new Groq({
 
             const response = await groq.chat.completions.create({
                 model: "llama-3.1-8b-instant",
-                messages: chat
+                messages: [{
+                    role: "system",
+                    content: "You are a funny, friendly roasting Ai.playful sarcasm, and light teasing. Dont ask about roasting, you roast based on situagion and always reply funny way. Also not too long reply."
+                },
+            ...chat]
             });
 
             const reply = response.choices[0]?.message?.content;

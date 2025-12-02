@@ -283,7 +283,7 @@ chatbox.classList.add("active");
 chatOpen=true;
 welcome.style.display="none";
 const name = e.dataset.name;
-
+activeChat=name;
 document.getElementById("current-name").textContent=name;
 
 

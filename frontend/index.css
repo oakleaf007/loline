@@ -728,4 +728,47 @@ background-color: #5c9d9b;
     color: #fff;
     }
 
+ #text-container{
+   overflow-y: auto;
+   overflow-x: hidden;
+   
+   display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: calc(100vh - 200px);
+        /* background-color: #2c4d6d; */
+        padding:5px;
+    }
+
+    #text-container::-webkit-scrollbar{
+        width: 4px;
+        color: #5c9d9b;
+    }
+.allmsg{
+ max-width:70%;
+  border-radius: 4px;
+     padding: 10px;
+}
+
+
+.usermsg{
+    
+  
+ 
+    background-color: #5c9d9b;
+   
+    
+    align-self: flex-end;
+   
+
+}
+.botmsg{
+  
+   
+    background-color: #5c9d9b;
+    border-radius: 4px;
+  
+    align-self: flex-start;
+
+}
  
