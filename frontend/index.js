@@ -280,12 +280,14 @@ ham2.classList.toggle('active');
  contactchat.forEach(e=>{
 
 e.addEventListener("click",()=>{
+    document.getElementById("text-container").innerHTML="";
 chatbox.classList.add("active");
 chatOpen=true;
 welcome.style.display="none";
 const name = e.dataset.name;
 activeChat=name;
 document.getElementById("current-name").textContent=name;
+ renderChat();
 
 
 screenLayout();

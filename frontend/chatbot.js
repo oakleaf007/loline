@@ -3,12 +3,14 @@ const botContainer = document.querySelector(".groq-chat");
 
 let activeChat=null;
 botContainer.addEventListener("click",()=>{
+     document.getElementById("text-container").innerHTML="";
     chatbox.classList.add("active");
     chatOpen=true;
     welcome.style.display="none";
     activeChat= botContainer.dataset.name;
     document.getElementById("current-name").textContent=activeChat;
-  
+    
+    renderChat();
 
     screenLayout();
 
@@ -36,6 +38,7 @@ function addMsg(text){
     div.className="allmsg usermsg";
      div.textContent = text;
       document.getElementById("text-container").append(div);
+      saveChat(text, sender="me")
  autoScroll();
 }
 
@@ -44,6 +47,7 @@ function botMsg(text){
     div.className="allmsg botmsg";
      div.textContent = text;
       document.getElementById("text-container").append(div);
+      saveChat(text, sender="them")
       autoScroll();
       
 }
@@ -59,7 +63,7 @@ function botMsg(text){
 
 
 
-let text="hello bot";
+
 
 async function chatbot(text){
     const res = await fetch("/api/chatbot",{
@@ -87,4 +91,50 @@ function autoScroll(){
     const container = document.getElementById('text-container');
     container.scrollTop = container.scrollHeight;
 
+}
+
+function saveChat(text, sender="me"){
+    if(!activeChat) return;
+
+    let history = JSON.parse(localStorage.getItem("chat_"+ activeChat)) || [];
+
+    history.push({
+        text,sender, time: Date.now()
+    });
+
+    localStorage.setItem("chat_" + activeChat, JSON.stringify(history));
+
+
+}
+
+function loadChat(){
+    if(!activeChat) return [];
+
+    return JSON.parse(localStorage.getItem("chat_"+ activeChat)) || [];
+
+}
+
+function renderChat(){
+    const container = document.getElementById('text-container');
+    container.innerHTML="";
+
+    let messages = loadChat();
+
+    messages.forEach(msg =>{
+        if(msg.sender==="me"){
+  const div = document.createElement("div");
+    div.className="allmsg usermsg";
+     div.textContent = msg.text;
+      document.getElementById("text-container").append(div);
+     
+ autoScroll();
+        }else{
+ const div = document.createElement("div");
+    div.className="allmsg botmsg";
+     div.textContent = msg.text;
+      document.getElementById("text-container").append(div);
+      
+      autoScroll();
+        }
+    })
 }
