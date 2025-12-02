@@ -36,7 +36,7 @@ function addMsg(text){
     div.className="allmsg usermsg";
      div.textContent = text;
       document.getElementById("text-container").append(div);
-
+ autoScroll();
 }
 
 function botMsg(text){
@@ -44,6 +44,7 @@ function botMsg(text){
     div.className="allmsg botmsg";
      div.textContent = text;
       document.getElementById("text-container").append(div);
+      autoScroll();
       
 }
 
@@ -80,4 +81,10 @@ async function chatbot(text){
 
  
     botMsg(data.reply);
+}
+
+function autoScroll(){
+    const container = document.getElementById('text-container');
+    container.scrollTop = container.scrollHeight;
+
 }

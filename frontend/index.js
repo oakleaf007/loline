@@ -79,6 +79,7 @@ options.classList.remove("active");
 document.getElementById("main").style.display="none";
 login.style.display="flex";
 localStorage.removeItem("user");
+window.location.reload();
 
 })
 
