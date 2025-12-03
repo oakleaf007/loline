@@ -54,17 +54,6 @@ function botMsg(text){
 
 
 
-
-
-
-// let text = document.getElementById("").value.trim();
-
-
-
-
-
-
-
 async function chatbot(text){
     const res = await fetch("/api/chatbot",{
         method: "POST",

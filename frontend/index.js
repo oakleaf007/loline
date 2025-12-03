@@ -79,9 +79,20 @@ options.classList.remove("active");
 document.getElementById("main").style.display="none";
 login.style.display="flex";
 localStorage.removeItem("user");
+
+clearChats();
 window.location.reload();
 
 })
+
+function clearChats(){
+    Object.keys(localStorage).forEach(key=>{
+        if(key.startsWith("chat_")){
+            localStorage.removeItem(key);
+        }
+        });
+        activeChat=null;
+}
 
 
 
