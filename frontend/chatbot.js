@@ -1,16 +1,19 @@
 
 const botContainer = document.querySelector(".groq-chat");
-
+const userDetails = JSON.parse(localStorage.getItem("user"));
 let activeChat=null;
 botContainer.addEventListener("click",()=>{
+   
+
+
      document.getElementById("text-container").innerHTML="";
     chatbox.classList.add("active");
     chatOpen=true;
     welcome.style.display="none";
     activeChat= botContainer.dataset.name;
     document.getElementById("current-name").textContent=activeChat;
-    
-    renderChat();
+    // console.log(userDetails._id);
+    renderChat(userDetails._id, activeChat);
 
     screenLayout();
 
@@ -26,7 +29,7 @@ if(!msgText){
 addMsg(msgText);
 
 if(activeChat==="Groq Groq"){
-    setTimeout(()=>chatbot(msgText),2);
+    setTimeout(()=>chatbot(msgText,userDetails._id),2);
   
 }
 document.getElementById("msginput").value = "";
@@ -38,7 +41,7 @@ function addMsg(text){
     div.className="allmsg usermsg";
      div.textContent = text;
       document.getElementById("text-container").append(div);
-      saveChat(text, sender="me")
+     
  autoScroll();
 }
 
@@ -47,14 +50,14 @@ function botMsg(text){
     div.className="allmsg botmsg";
      div.textContent = text;
       document.getElementById("text-container").append(div);
-      saveChat(text, sender="them")
+    
       autoScroll();
       
 }
 
 
 
-async function chatbot(text){
+async function chatbot(text, userId){
     const res = await fetch("/api/chatbot",{
         method: "POST",
         headers:{ "Content-Type": "application/json"},
@@ -64,7 +67,9 @@ async function chatbot(text){
                     role: "user",
                      content: text
                 }
-            ]
+            ],
+            userId,
+            botName: activeChat
         })
     });
 
@@ -82,45 +87,59 @@ function autoScroll(){
 
 }
 
-function saveChat(text, sender="me"){
-    if(!activeChat) return;
+// function saveChat(text, sender="me"){
+//     if(!activeChat) return;
 
-    let history = JSON.parse(localStorage.getItem("chat_"+ activeChat)) || [];
+//     let history = JSON.parse(localStorage.getItem("chat_"+ activeChat)) || [];
 
-    history.push({
-        text,sender, time: Date.now()
-    });
+//     history.push({
+//         text,sender, time: Date.now()
+//     });
 
-    localStorage.setItem("chat_" + activeChat, JSON.stringify(history));
+//     localStorage.setItem("chat_" + activeChat, JSON.stringify(history));
 
+
+// }
+
+async function loadChat(id,botName){
+    try{
+         const data = await fetch(`/api/getChat/${id}/${botName}`);
+         const result = await data.json();
+         return result;
+    }catch(err){
+        console.error(err);
+
+    }
+   
+    
+    
 
 }
 
-function loadChat(){
-    if(!activeChat) return [];
-
-    return JSON.parse(localStorage.getItem("chat_"+ activeChat)) || [];
-
-}
-
-function renderChat(){
+async function renderChat(chatId, activeData){
     const container = document.getElementById('text-container');
     container.innerHTML="";
-
-    let messages = loadChat();
-
+    let messages;
+    try{
+       messages = await loadChat(chatId,activeData);
+    }catch(err){
+        console.error("Error loading chat or empty", err);
+        messages=[];
+    }
     messages.forEach(msg =>{
-        if(msg.sender==="me"){
+        if(msg.userChat){
   const div = document.createElement("div");
     div.className="allmsg usermsg";
-     div.textContent = msg.text;
+     div.textContent = msg.userChat;
       document.getElementById("text-container").append(div);
      
  autoScroll();
-        }else{
+        }
+        
+      if(msg.botChat){
  const div = document.createElement("div");
     div.className="allmsg botmsg";
-     div.textContent = msg.text;
+     div.textContent = msg.botChat;
       document.getElementById("text-container").append(div);
       
       autoScroll();

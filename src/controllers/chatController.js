@@ -1,8 +1,6 @@
 import Groq from "groq-sdk";
-import dotenv from "dotenv";
 
-dotenv.config();
-
+import Chat from "../models/chatstore.js"
 
 const groq = new Groq({
      apiKey: process.env.GROQ_API,
@@ -10,11 +8,12 @@ const groq = new Groq({
 
     export const chatbot = async(req,res)=>{
         try{
-            const {chat} =req.body;
+            const {chat, userId, botName} =req.body;
 
             if(!chat || !Array.isArray(chat)){
                 return res.status(400).json({mesaage: "Message required or invalid message"});
             }
+            const lastUserMsg = chat[chat.length-1]?.content || "";
 
             const response = await groq.chat.completions.create({
                 model: "llama-3.1-8b-instant",
@@ -27,6 +26,12 @@ const groq = new Groq({
 
             const reply = response.choices[0]?.message?.content;
 
+            await Chat.create({
+                userId: userId,
+                botName: botName,
+                userChat: lastUserMsg,
+                botChat: reply
+            })
             return res.status(200).json({reply});
 
 

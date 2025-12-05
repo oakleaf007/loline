@@ -51,6 +51,8 @@ document.getElementById("submit").addEventListener("click", async(e)=>{
 
         
          msg.textContent="";
+        
+         window.location.reload();
      },1000)
         
     }else{
