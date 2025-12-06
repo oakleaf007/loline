@@ -32,17 +32,23 @@ const modeToggle= document.getElementById("register");
 let mode="signin";
 
 
+
 modeToggle.addEventListener("click",function(){
+      msg.textContent="";
 if(mode==="signin"){
     document.getElementById("confirm-password").style.display="block";
     modeToggle.textContent="Login";
     mode="signup";
+   
+    
 }
 else{
 
       document.getElementById("confirm-password").style.display="none";
-      modeToggle.textContent="Signup";
+      modeToggle.textContent="Register";
        mode="signin";
+      
+       
 
 }
 });

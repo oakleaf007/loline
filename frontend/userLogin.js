@@ -1,5 +1,5 @@
 
-
+const msg= document.getElementById("msg");
 
 
 document.getElementById("submit").addEventListener("click", async(e)=>{
@@ -14,7 +14,7 @@ document.getElementById("submit").addEventListener("click", async(e)=>{
     
     const email = document.getElementById("email").value.trim().toLowerCase();
     const pass = document.getElementById("password").value.trim();
-    const msg= document.getElementById("msg");
+    
     const login = document.getElementById("login-screen");
     msg.textContent="";
     msg.style.color="green";
