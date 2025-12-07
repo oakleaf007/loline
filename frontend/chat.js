@@ -16,6 +16,8 @@ function sendMessage(msgText,receiverId){
 
 
 socket.on("receive_message", (data)=> {
+
+    receiverId = data.from;
     recieveMsg(data.text, data.from);
 });
 
