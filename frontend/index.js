@@ -290,7 +290,7 @@ ham2.classList.toggle('active');
 
 // active chat logic
 
-let receiverId= null;
+
  contactchat.forEach(e=>{
 
 e.addEventListener("click",()=>{
@@ -300,7 +300,7 @@ chatOpen=true;
 welcome.style.display="none";
 const name = e.dataset.name;
 activeChat=name;
-receiverId="692c14512ae224bbc0048e6b";
+getContact();
 
 document.getElementById("current-name").textContent=name;
 //  renderChat();
