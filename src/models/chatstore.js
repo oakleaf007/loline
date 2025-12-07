@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 
 const chatStorage = new mongoose.Schema({
     userId:{ type: String, required:true},
-    botName:{type: String, required:true},
+    activeChat:{type: String, required:true},
     userChat :{ type: String},
-    botChat :{ type: String},
+    contactChat :{ type: String},
     timestamp:{type: Date, default: Date.now}
 });
 

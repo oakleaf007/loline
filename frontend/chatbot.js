@@ -2,6 +2,7 @@
 const botContainer = document.querySelector(".groq-chat");
 const userDetails = JSON.parse(localStorage.getItem("user"));
 let activeChat=null;
+
 botContainer.addEventListener("click",()=>{
    
 
@@ -12,13 +13,19 @@ botContainer.addEventListener("click",()=>{
     welcome.style.display="none";
     activeChat= botContainer.dataset.name;
     document.getElementById("current-name").textContent=activeChat;
+      
     // console.log(userDetails._id);
     renderChat(userDetails._id, activeChat);
 
     screenLayout();
 
+
 })
 
+const deleteBtn=document.getElementById("deleteChat");
+    deleteBtn.addEventListener("click",()=>{
+        deleteChat(userDetails._id,activeChat);
+    });
 
 const sendbtn = document.getElementById("send")
 sendbtn.addEventListener("click",()=>{
@@ -69,7 +76,7 @@ async function chatbot(text, userId){
                 }
             ],
             userId,
-            botName: activeChat
+            activeChat: activeChat
         })
     });
 
@@ -101,9 +108,9 @@ function autoScroll(){
 
 // }
 
-async function loadChat(id,botName){
+async function loadChat(userId,activeChat){
     try{
-         const data = await fetch(`/api/getChat/${id}/${botName}`);
+         const data = await fetch(`/api/getChat/${userId}/${activeChat}`);
          const result = await data.json();
          return result;
     }catch(err){
@@ -136,13 +143,20 @@ async function renderChat(chatId, activeData){
  autoScroll();
         }
         
-      if(msg.botChat){
+      if(msg.contactChat){
  const div = document.createElement("div");
     div.className="allmsg botmsg";
-     div.textContent = msg.botChat;
+     div.textContent = msg.contactChat;
       document.getElementById("text-container").append(div);
       
       autoScroll();
         }
     })
+}
+
+async function deleteChat(id, activeChat){
+    await fetch(`/api/clearchat/${id}/${activeChat}`,{
+        method: "DELETE"
+    });
+    document.getElementById("text-container").innerHTML = "";
 }
