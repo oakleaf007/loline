@@ -1,4 +1,4 @@
-const socket = io("http://192.168.0.105:3000");
+const socket = io(window.location.origin);
 
 if(userDetails){
    socket.emit("join", userDetails._id);
