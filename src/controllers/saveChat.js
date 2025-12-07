@@ -3,7 +3,7 @@ import Chat from "../models/chatstore.js";
 export const saveChat = async(req,res)=>{
 
 try{
-    const {userId, userChat, contactChat,activeChat} = req.body;
+    const {userId, userChat,userName, contactChat,activeChat} = req.body;
     const chat = new Chat({userId, botName, userChat, botChat});
 
     await chat.save();

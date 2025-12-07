@@ -27,20 +27,7 @@ const deleteBtn=document.getElementById("deleteChat");
         deleteChat(userDetails._id,activeChat);
     });
 
-const sendbtn = document.getElementById("send")
-sendbtn.addEventListener("click",()=>{
-const msgText = document.getElementById("msginput").value.trim();
-if(!msgText){
-    return;
-}
-addMsg(msgText);
 
-if(activeChat==="Groq Groq"){
-    setTimeout(()=>chatbot(msgText,userDetails._id),2);
-  
-}
-document.getElementById("msginput").value = "";
-});
 
 
 function addMsg(text){
@@ -52,7 +39,7 @@ function addMsg(text){
  autoScroll();
 }
 
-function botMsg(text){
+function recieveMsg(text){
     const div = document.createElement("div");
     div.className="allmsg botmsg";
      div.textContent = text;
@@ -76,6 +63,7 @@ async function chatbot(text, userId){
                 }
             ],
             userId,
+            userName: userDetails.email,
             activeChat: activeChat
         })
     });
@@ -85,7 +73,7 @@ async function chatbot(text, userId){
    
 
  
-    botMsg(data.reply);
+   recieveMsg(data.reply);
 }
 
 function autoScroll(){

@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 
 const chatStorage = new mongoose.Schema({
     userId:{ type: String, required:true},
+    userName:{type: String, required:true, default:"unknown"},
     activeChat:{type: String, required:true},
     userChat :{ type: String},
     contactChat :{ type: String},

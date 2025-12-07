@@ -8,7 +8,7 @@ const groq = new Groq({
 
     export const chatbot = async(req,res)=>{
         try{
-            const {chat, userId, activeChat} =req.body;
+            const {chat, userId,userName,  activeChat} =req.body;
 
             if(!chat || !Array.isArray(chat)){
                 return res.status(400).json({mesaage: "Message required or invalid message"});
@@ -28,6 +28,7 @@ const groq = new Groq({
 
             await Chat.create({
                 userId: userId,
+                userName: userName,
                 activeChat: activeChat,
                 userChat: lastUserMsg,
                 contactChat: reply

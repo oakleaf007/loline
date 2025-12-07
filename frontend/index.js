@@ -72,6 +72,7 @@ ham2.classList.toggle('active');
    
 });
 
+// logout btn logic
 
 const logout = document.querySelector(".logout-btn");
 logout.addEventListener("click",()=>{
@@ -80,19 +81,19 @@ document.getElementById("main").style.display="none";
 login.style.display="flex";
 localStorage.removeItem("user");
 
-clearChats();
+// clearChats();
 window.location.reload();
 
 })
 
-function clearChats(){
-    Object.keys(localStorage).forEach(key=>{
-        if(key.startsWith("chat_")){
-            localStorage.removeItem(key);
-        }
-        });
-        activeChat=null;
-}
+// function clearChats(){
+//     Object.keys(localStorage).forEach(key=>{
+//         if(key.startsWith("chat_")){
+//             localStorage.removeItem(key);
+//         }
+//         });
+//         activeChat=null;
+// }
 
 
 
@@ -287,7 +288,9 @@ ham2.classList.toggle('active');
 
 // })
 
+// active chat logic
 
+let receiverId= null;
  contactchat.forEach(e=>{
 
 e.addEventListener("click",()=>{
@@ -297,8 +300,10 @@ chatOpen=true;
 welcome.style.display="none";
 const name = e.dataset.name;
 activeChat=name;
+receiverId="692c14512ae224bbc0048e6b";
+
 document.getElementById("current-name").textContent=name;
- renderChat();
+//  renderChat();
 
 
 screenLayout();
