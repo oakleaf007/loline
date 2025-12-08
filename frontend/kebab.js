@@ -1,6 +1,6 @@
 
-const kebab =  document.getElementById("kebab-menu");
-document.getElementById("kebab").addEventListener("click",()=>{
+const kebab =  document.querySelector(".kebab-menu");
+document.querySelector(".kebab").addEventListener("click",()=>{
 
    kebab.classList.toggle("active");
 })

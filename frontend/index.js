@@ -290,25 +290,51 @@ ham2.classList.toggle('active');
 
 // active chat logic
 
-
- contactchat.forEach(e=>{
-
-e.addEventListener("click",()=>{
-    document.getElementById("text-container").innerHTML="";
+let receiverId= null;
+list.addEventListener("click", (e)=>{
+    const contact = e.target.closest(".chat-contact");
+    if(!contact) return;
+document.querySelector(".text-container").innerHTML="";
 chatbox.classList.add("active");
 chatOpen=true;
 welcome.style.display="none";
-const name = e.dataset.name;
+const name = contact.dataset.name;
 activeChat=name;
-getContact();
 
-document.getElementById("current-name").textContent=name;
+receiverId= contact.dataset.id;
+console.log(receiverId);
+document.querySelector(".current-name").textContent=name;
 //  renderChat();
 
 
 screenLayout();
-});
-});
+
+})
+
+
+
+
+
+
+
+//  contactchat.forEach(e=>{
+
+// e.addEventListener("click",()=>{
+//     document.getElementById("text-container").innerHTML="";
+// chatbox.classList.add("active");
+// chatOpen=true;
+// welcome.style.display="none";
+// const name = e.dataset.name;
+// activeChat=name;
+// getContact();
+
+// document.getElementById("current-name").textContent=name;
+// //  renderChat();
+
+
+// screenLayout();
+// });
+// });
 
 let chatOpen = false;
 

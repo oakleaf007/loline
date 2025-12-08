@@ -7,12 +7,12 @@ botContainer.addEventListener("click",()=>{
    
 
 
-     document.getElementById("text-container").innerHTML="";
+     document.querySelector(".text-container").innerHTML="";
     chatbox.classList.add("active");
     chatOpen=true;
     welcome.style.display="none";
     activeChat= botContainer.dataset.name;
-    document.getElementById("current-name").textContent=activeChat;
+    document.querySelector(".current-name").textContent=activeChat;
       
     // console.log(userInfo._id);
     renderChat(userInfo._id, activeChat);
@@ -22,7 +22,7 @@ botContainer.addEventListener("click",()=>{
 
 })
 
-const deleteBtn=document.getElementById("deleteChat");
+const deleteBtn=document.querySelector(".deleteChat");
     deleteBtn.addEventListener("click",()=>{
         deleteChat(userInfo._id,activeChat);
     });
@@ -34,7 +34,7 @@ function addMsg(text){
     const div = document.createElement("div");
     div.className="allmsg usermsg";
      div.textContent = text;
-      document.getElementById("text-container").append(div);
+      document.querySelector(".text-container").append(div);
      
  autoScroll();
 }
@@ -43,7 +43,7 @@ function recieveMsg(text){
     const div = document.createElement("div");
     div.className="allmsg botmsg";
      div.textContent = text;
-      document.getElementById("text-container").append(div);
+      document.querySelector(".text-container").append(div);
     
       autoScroll();
       
@@ -77,7 +77,7 @@ async function chatbot(text, userId){
 }
 
 function autoScroll(){
-    const container = document.getElementById('text-container');
+    const container = document.querySelector('.text-container');
     container.scrollTop = container.scrollHeight;
 
 }
@@ -112,7 +112,7 @@ async function loadChat(userId,activeChat){
 }
 
 async function renderChat(chatId, activeData){
-    const container = document.getElementById('text-container');
+    const container = document.querySelector('.text-container');
     container.innerHTML="";
     let messages;
     try{
@@ -126,7 +126,7 @@ async function renderChat(chatId, activeData){
   const div = document.createElement("div");
     div.className="allmsg usermsg";
      div.textContent = msg.userChat;
-      document.getElementById("text-container").append(div);
+      document.querySelector(".text-container").append(div);
      
  autoScroll();
         }
@@ -135,7 +135,7 @@ async function renderChat(chatId, activeData){
  const div = document.createElement("div");
     div.className="allmsg botmsg";
      div.textContent = msg.contactChat;
-      document.getElementById("text-container").append(div);
+      document.querySelector(".text-container").append(div);
       
       autoScroll();
         }
@@ -146,5 +146,5 @@ async function deleteChat(id, activeChat){
     await fetch(`/api/clearchat/${id}/${activeChat}`,{
         method: "DELETE"
     });
-    document.getElementById("text-container").innerHTML = "";
+    document.querySelector(".text-container").innerHTML = "";
 }

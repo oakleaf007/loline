@@ -240,7 +240,7 @@ transform: translate(0, -30%);
   
 
    }
-   #pic{
+   .pic{
    text-align: center;
     padding: 5px;
     height: 40px;
@@ -248,7 +248,7 @@ transform: translate(0, -30%);
     border-radius: 50%;
     border: 2px solid #fff;
    }
-   #chat-box{
+   .chat-window{
     min-width: 0;
     padding: 20px;
     padding-left: 10px;
@@ -278,18 +278,17 @@ transform: translate(0, -30%);
    #list-contact:hover{
     background-color: #6db7b4;
    }
-
-#span-cont{
+.span-cont{
      overflow: hidden;
     text-overflow: ellipsis;
 }
 
 
-   #chats-cont{
+   .chats-cont{
     
     flex: 1;
    }
-#chat-head{
+.chat-head{
     min-width: 0;
     /* border: 2px solid #fff; */
     padding: 10px;
@@ -298,27 +297,27 @@ transform: translate(0, -30%);
     display: flex;
     justify-content: space-between;
 }
-#prof-cont{
+.prof-cont{
     display: flex;
     gap: 10px;
 }
 
 
-#calling-id{
+.calling-id{
     place-content: center;
     cursor: pointer;
 }
 
 
 
-   #chatbtn-cont{
+   .chatbtn-cont{
     min-width: 0;
     text-align: center;
     display: flex;
     gap: 10px;
 
    }
-   #msginput{
+  .msginput{
     min-width: 0;
     height: 40px;
     background-color: #22946e;
@@ -332,10 +331,10 @@ flex: 1;
    }
 
 
-   #msginput::placeholder{
+  .msginput::placeholder{
     color: #fff;
    }
-   #send{
+   .send{
     padding: 10px;
    border-radius: 4px;
    border: none;
@@ -345,7 +344,7 @@ flex: 1;
    color: #fff;
 
    }
-   #send:hover{
+   .send:hover{
     background-color:#2c4d6d;
     color: #fff;
    }
@@ -401,11 +400,11 @@ flex: 1;
         place-content: center;
     }
 
-#back-cont{
+.back-cont{
     display: none;
     place-content: center;
 }
-#back-cont button{
+.back-cont button{
     background-color: #6db7b4;
     border:none;
     color: #fff;
@@ -414,7 +413,7 @@ flex: 1;
     transition: all 0.3s ease;  
        
 }
-#back-cont button:hover{
+.back-cont button:hover{
 background-color: #5c9d9b;
 }
     @media screen and (max-width:540px){
@@ -433,7 +432,7 @@ background-color: #5c9d9b;
            display: block;
             text-align: center;
         }
-        #back-cont{
+       .back-cont{
    
     display:block;
     
@@ -770,7 +769,7 @@ background-color: #5c9d9b;
     color: #fff;
     }
 
- #text-container{
+ .text-container{
    overflow-y: auto;
    overflow-x: hidden;
    
@@ -782,7 +781,7 @@ background-color: #5c9d9b;
         padding:8px 4px 8px 4px;
     }
 
-    #text-container::-webkit-scrollbar{
+    .text-container::-webkit-scrollbar{
         width: 4px;
         color: #5c9d9b;
     }

@@ -50,8 +50,9 @@ h3{
     gap: 15px;
       
 }
-input[type="email"], 
-    [type="password"], [type="text"]{
+#form input[type="email"], 
+   #form [type="password"],
+   #form [type="text"]{
      /* box-shadow: 0 0 5px rgba(153, 234, 188, 0.3); */
     border-radius: 2px;
     outline: none;

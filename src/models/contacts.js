@@ -2,14 +2,23 @@ import mongoose from "mongoose";
 
 
 const contacts = new mongoose.Schema({
-     owner: {
+     
+     ownerId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
-    contactUser: {
+    contactId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
+        required: true
+    },
+    ownerName: {
+        type: String,
+        required: true
+    },
+    contactName: {
+        type: String,
         required: true
     },
     addedAt: { type: Date, default: Date.now }

@@ -10,6 +10,7 @@
         document.getElementById("uname").textContent=userInfo.name;
         document.getElementById("uname2").textContent=userInfo.name;
         document.getElementById("mail").textContent=userInfo.email;
+        getContact();
         }
         })
         

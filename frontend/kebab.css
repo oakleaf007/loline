@@ -1,4 +1,4 @@
-#kebab{
+.kebab{
     height: 24px;
     width: 24px;
     display: flex;
@@ -9,7 +9,7 @@ align-items: center;
     position: relative;
 }
 
-#kebab span{
+.kebab span{
     border-radius: 50%;
     width: 4px;
     height:4px;
@@ -17,7 +17,7 @@ align-items: center;
     
 }
 
-#kebab-menu{
+.kebab-menu{
     width: 100px;
     right: 50%;
     top: 100%;
@@ -30,15 +30,15 @@ align-items: center;
    
     
 }
-#kebab-menu ul li{
+.kebab-menu ul li{
     padding: 5px;
     list-style: none;
     border-radius: 4px;
      transition: all 0.3s ease;
 }
-#kebab-menu ul li:hover{
+.kebab-menu ul li:hover{
    background-color: #6db7b4;
 }
-#kebab-menu.active{
+.kebab-menu.active{
     display: block;
 }

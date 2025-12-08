@@ -21,8 +21,6 @@ function sendMessage(msgText,receiverId){
 
 
 socket.on("receive_message", (data)=> {
-
-    receiverId = data.from;
     recieveMsg(data.text, data.from, data.userName);
 });
 
@@ -30,9 +28,9 @@ socket.on("receive_message", (data)=> {
 
 
 
-const sendbtn = document.getElementById("send")
+const sendbtn = document.querySelector(".send")
 sendbtn.addEventListener("click",async()=>{
-const msgText = document.getElementById("msginput").value.trim();
+const msgText = document.querySelector(".msginput").value.trim();
 if(!msgText){
     return;
 }
@@ -47,7 +45,7 @@ if(activeChat==="Groq Groq"){
 }
 
 
-document.getElementById("msginput").value = "";
+document.querySelector(".msginput").value = "";
 });
 
 
