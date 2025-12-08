@@ -7,7 +7,7 @@ export const login = async(req, res)=>{
     try {
 
     
-    const {email, pass} = req.body;
+    const {email, pass } = req.body;
     let status= "online";
 
     if (!email || !pass) return res.status(400).json({message: "Email and password required"});
@@ -38,7 +38,7 @@ export const login = async(req, res)=>{
 
 export const signup = async(req, res)=>{
 try{
- const { email, pass} = req.body;
+ const {name ,email, pass } = req.body;
 
   if (!email || !pass) return res.status(400).json({message: "Email and password required"});
 
@@ -48,7 +48,7 @@ try{
 
     const hashed = await bcrypt.hash(pass,10);
     
-  await User.create({email, pass:hashed});
+  await User.create({ name, email, pass:hashed});
 
     res.status(201).json({message: "signup successfull"});
 }catch(err){

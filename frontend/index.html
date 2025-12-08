@@ -173,21 +173,26 @@
                     <div class="close"><span>x</span></div>
                      <!-- <div id="notice">All contacts</div> -->
               <!-- <iframe src="settings.html" id="iframe"></iframe> -->
+               <div id="contact-search">
+                <form>
+                        <input id="contact-input" placeholder="username must be exact match for privacy purpose" type="search">
+                        <button id="search-contact-btn">search</button>
+                </form>
+                
+               </div>
                      <div id="options-element2" >
-                       <div id="list-contact2" class="chat-contact" data-name="Penguin" >
-        <div style="display: flex; gap: 10px;"><div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div>
-        <div style="place-content: center;" id="span-cont"><span>penguin</span></div> </div>
-        <div class="delete-btn"><img src="./icons/delete.svg" width="24px" height="24px"></div>
-                     </div>
-                     <div id="list-contact2" class="chat-contact" data-name="Penguin" >
-        <div style="display: flex; gap: 10px;"><div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div>
-        <div style="place-content: center;" id="span-cont"><span>Dinosaur</span></div> </div>
-        <div class="delete-btn"><img src="./icons/delete.svg" width="24px" height="24px"></div>
-                     </div>
+                    
+                     
+ 
                       
                      
                      
                     </div>
+                       <div id="list-contact2" class="chat-contact" data-name="Penguin" >
+        <div style="display: flex; gap: 10px;"><div id="pic"><img src="./icons/profile.svg" height="24px" width="24px"></div>
+        <div style="place-content: center;" id="span-cont"><span class="span-name">penguin</span></div> </div>
+        <div class="delete-btn"><img src="./icons/add.svg" width="24px" ></div>
+                     </div>
                 </div>
 
 <!-- help section -->
@@ -292,21 +297,10 @@
     </main>
 
     <script>
-        window.addEventListener("load", async()=>{
-            const userInfo = JSON.parse(localStorage.getItem("user"));
-        if(userInfo){
-              document.getElementById("main").style.display="flex";
-            login.style.display="none";
-            let uemail = userInfo.email;
-        
-        document.getElementById("uname").textContent=uemail.split("@")[0];
-        document.getElementById("uname2").textContent=userInfo.email;
-        document.getElementById("mail").textContent=userInfo.email;
-        }
-        })
-        
+       
 
     </script>
+    <script src="validUser.js"></script>
     <script src="profile.js"></script>
     <script src="index.js"></script>
     <script src="hamburger.js"></script>

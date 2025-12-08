@@ -39,13 +39,15 @@ document.getElementById("submit").addEventListener("click", async(e)=>{
           msg.style.color="green";
      msg.textContent=data.message + ", redirecting..";
     
-          let uemail = data.user.email;
+        //   let uemail = data.user.email;
         
-        document.getElementById("uname").textContent=uemail.split("@")[0];
-        document.getElementById("uname2").textContent=data.user.email;
+        document.getElementById("uname").textContent=data.user.name;
+        document.getElementById("uname2").textContent=data.user.name;
+       
         document.getElementById("mail").textContent=data.user.email; 
     
      setTimeout(()=>{
+          
         document.getElementById("main").style.display="flex";
         login.style.display="none";
 
@@ -85,11 +87,13 @@ try{
         msg.textContent="Confirm password does not match";
         return;
     }
-  
+    const username = email.split("@");
+
+    
     const res = await fetch("/api/signup", {
         method: "POST",
         headers: { "Content-Type" : "application/json"},
-        body: JSON.stringify({email, pass})
+        body: JSON.stringify({name: username[0],email, pass})
     });
 
    

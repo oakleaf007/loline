@@ -1,6 +1,6 @@
 
 const botContainer = document.querySelector(".groq-chat");
-const userDetails = JSON.parse(localStorage.getItem("user"));
+
 let activeChat=null;
 
 botContainer.addEventListener("click",()=>{
@@ -14,8 +14,8 @@ botContainer.addEventListener("click",()=>{
     activeChat= botContainer.dataset.name;
     document.getElementById("current-name").textContent=activeChat;
       
-    // console.log(userDetails._id);
-    renderChat(userDetails._id, activeChat);
+    // console.log(userInfo._id);
+    renderChat(userInfo._id, activeChat);
 
     screenLayout();
 
@@ -24,7 +24,7 @@ botContainer.addEventListener("click",()=>{
 
 const deleteBtn=document.getElementById("deleteChat");
     deleteBtn.addEventListener("click",()=>{
-        deleteChat(userDetails._id,activeChat);
+        deleteChat(userInfo._id,activeChat);
     });
 
 
@@ -63,7 +63,7 @@ async function chatbot(text, userId){
                 }
             ],
             userId,
-            userName: userDetails.email,
+            userName: userInfo.email,
             activeChat: activeChat
         })
     });

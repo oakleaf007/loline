@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 const userSchema = new mongoose.Schema({
-    // name: { type: String },
+    name: { type: String , required: true},
     email: { type: String, required: true},
     pass: { type : String, required: true},
     status:{ type: String,  required:true, default: "offline"}

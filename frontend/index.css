@@ -633,9 +633,9 @@ background-color: #5c9d9b;
     border-radius: 10px;
     background-color: #22946e;
     cursor: pointer;
-    overflow: hidden;
+       
     text-overflow: ellipsis;
-    display: flex;
+    display: none;
     justify-content: space-between;
     gap: 10px;
     transition: all 0.3s ease;
@@ -645,21 +645,63 @@ background-color: #5c9d9b;
     background-color: #6db7b4;
    }
    .delete-btn{
+    height: 24px;
+    width: 24px;
+    place-items: center;
+    place-content: center;
     border-radius: 4px;
     transition: all 0.3s ease;
     /* background-color: #333; */
    }
    .delete-btn:hover{
-    background-color: #333;
+    background-color: #fff;
    }
     
  #options-element2{
+    /* border: 2px solid #2c4d6d; */
+   
+   overflow-y: auto;
+   overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 10px;
-       padding-top:6px ;
+    padding: 5px;
+    padding-top:6px ;
     color: #fff;
+    max-height: calc(100vh - 140px);
+   
+    
     }
+
+   #options-element2::-webkit-scrollbar{
+        width:3px;
+        background-color: #333;
+       
+    }
+    #contact-search{
+        padding: 5px;
+    }
+      #contact-search form input{
+        outline: none;
+        padding:8px;
+         border: none;
+ border-radius:4px;
+
+    }
+      #contact-search form button{
+        padding: 8px;
+        cursor: pointer;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+         background-color: #22946e;
+         transition: all 0.3s ease;
+    }
+    #contact-search form button:hover{
+        background-color: #5c9d9b;
+    }
+
+
 #notice{
     
     color: #fff;
