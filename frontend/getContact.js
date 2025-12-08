@@ -63,7 +63,7 @@ contactBtn.addEventListener("click",async(e)=>{
     
     const res = await user.json();
     localStorage.setItem("contact", JSON.stringify(res.user));
-        console.log(res.user._id);
+        
     if(!user.ok){
         
          const msgBox = document.createElement("div");
@@ -123,8 +123,7 @@ contactBtn.addEventListener("click",async(e)=>{
 
 async function addContact(){
 const res= JSON.parse(localStorage.getItem("contact"));
-console.log(res._id);
-console.log(userInfo._id);
+
    const result = await fetch("/api/savecontact",{
         method: "POST",
          headers: {
