@@ -6,9 +6,9 @@ async function getContact(){
     let ownerId = userInfo._id; 
     const res = await fetch(`api/getcontact/${ownerId}`);
     const contacts = await res.json();
-    console.log(contacts);
+   
 
-    const arr = contacts.contact;
+    const arr = contacts.contact || [];
 
     arr.forEach(e=>{
         const div = document.querySelector("#list-contact");
