@@ -12,7 +12,7 @@ const list = document.getElementById("list");
 const screenSize = window.matchMedia('(max-width:540px)');
 
 const title = document.getElementById("title-name");
-const btn = document.getElementById("back");
+const btn = document.querySelector(".back");
 
 const ham2 = document.getElementById("ham");
 

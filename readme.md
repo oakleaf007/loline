@@ -1,8 +1,14 @@
 # LOLine
 
-A lightweight, funny chat application currently **in active development**. The goal of LOLine is simple: make chatting fun, fast, and filled with laughs.
-Check the demo here: [Loline/QchatDemo](https://chatastrophe.netlify.app/).  
-Check or test the app here (be patient, first load takes time cause of free hosting): [Qchat/Loline](https://qchat-d58y.onrender.com/)
+**LOLine** is a lightweight, real-time chat application built using **Node.js**, **Express.js**, **MongoDB**, and **Socket.IO**.  
+It delivers fast, seamless messaging with real-time communication and includes an integrated **AI chatbot** for smart and fun interactions.
+
+Designed for **speed, simplicity, and laughs**, LOLine provides a clean and humorous chat experience.  
+The project is currently **under active development** with frequent updates and improvements.
+
+👉 **Live Demo:** https://chatastrophe.netlify.app/  
+👉 **Test the App** (first load may take time due to free hosting): https://qchat-d58y.onrender.com/
+
 
 ---
 
@@ -14,7 +20,7 @@ Right now, LOLine contains **UI test screens only**:
 * ✅ Prototype chat window
 * ✅ Rough theme/colors
 * ✅ backend server
-* ❌ No real-time messaging
+* ✅ real-time messaging(testing)
 * ✅ basic authentication
 
 This repository exists to track progress as the project grows.
