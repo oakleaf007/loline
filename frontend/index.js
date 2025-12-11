@@ -68,7 +68,7 @@ if (helpMenu.classList.contains("active")) {
 
 
    menu.classList.remove('active');
-ham2.classList.toggle('active');
+ham2.classList.remove('active');
    
 });
 
