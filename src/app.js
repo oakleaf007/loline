@@ -36,9 +36,10 @@ app.get("/", (req,res)=>{
 
 import userRoutes from "./routes/userRoutes.js";
 import chatRoute from "./routes/chatRoute.js";
+import  ping from '../src/service/ping.js';
 
 app.use("/api", userRoutes);
 app.use("/api", chatRoute);
-
+app.use("/api",ping);
 
 export default app;
