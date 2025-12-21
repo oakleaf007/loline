@@ -1,14 +1,23 @@
 
 const botContainer = document.querySelector(".groq-chat");
-
+const botchatbox= document.getElementById("botchat-box");
 let activeChat=null;
+// let chatOpen = false;
+
+
 
 botContainer.addEventListener("click",()=>{
    
-
-
-     document.querySelector(".text-container").innerHTML="";
-    chatbox.classList.add("active");
+    if(receiverId){
+        const activeDiv = document.getElementById(`chat-${receiverId}`);
+        if(activeDiv){
+    activeDiv.style.display="none";
+    
+}
+    }
+     const textContainer = botchatbox.querySelector(".text-container");
+     if (textContainer) textContainer.innerHTML = "";
+    botchatbox.classList.add("active");
     chatOpen=true;
     welcome.style.display="none";
     activeChat= botContainer.dataset.name;

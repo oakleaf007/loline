@@ -123,12 +123,15 @@ ham2.classList.toggle('active');
 if(btn){
 btn.addEventListener("click",async()=>{
 
-    chatbox.classList.remove("active");
+    botchatbox.classList.remove("active");
     list.style.display="flex";
     chatOpen=false; 
 })
 
 }
+
+
+
 
 setting.addEventListener("click", async()=>{
 
@@ -292,24 +295,40 @@ ham2.classList.toggle('active');
 
 let receiverId= null;
 list.addEventListener("click", (e)=>{
-    const contact = e.target.closest(".chat-contact");
+    const contact = e.target.closest(".chat-contacts2");
     if(!contact) return;
-document.querySelector(".text-container").innerHTML="";
-chatbox.classList.add("active");
-chatOpen=true;
-welcome.style.display="none";
-const name = contact.dataset.name;
-activeChat=name;
+     botchatbox.classList.remove("active");
+   
+activeChat= contact.dataset.name;
+// console.log(activeChat);
 
 receiverId= contact.dataset.id;
-console.log(receiverId);
-document.querySelector(".current-name").textContent=name;
-//  renderChat();
+// console.log(receiverId);
+
+document.querySelectorAll(".chat-window").forEach(chat=>{
+    chat.style.display="none";
+    
+})
+
+const activeDiv = document.getElementById(`chat-${receiverId}`);
+if(activeDiv){
+    
+    activeDiv.style.display="flex";
+    const container = activeDiv.querySelector(".text-container");
+    autoScrollBottom(container)
+    const namex = activeDiv.querySelector(".current-Name");
+    if(namex) namex.textContent=activeChat;
+   
+}
+
+chatOpen=true;
+welcome.style.display="none";
 
 
 screenLayout();
 
 })
+
 
 
 

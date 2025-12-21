@@ -11,25 +11,44 @@ async function getContact(){
     const arr = contacts.contact || [];
 
     arr.forEach(e=>{
-        const div = document.querySelector("#list-contact");
+        const div = document.querySelector(".chat-contacts");
 
     const addDiv = div.cloneNode(true);
-    addDiv.className = "chat-contact";
+    addDiv.className = "chat-contacts2";
+    addDiv.style.display="flex";
   
- addDiv.querySelector(".span-cont").textContent=e.contactName;
+ addDiv.querySelector(".contact-name2").textContent=e.contactName;
  addDiv.dataset.id=e.contactId;
  addDiv.dataset.name=e.contactName;
 
-//  const template = document.getElementById("chat-box");
-
-//  const chatcopy = template.cloneNode(true);
-
-//  chatcopy.id =`chat-${e.contactId}`;
-//  chatcopy.style.display= "none";
-//  document.getElementById("content").append(chatcopy);
+ document.getElementById('list').append(addDiv);
 
 
-    document.getElementById('list').append(addDiv);
+ const template = document.querySelector(".chat-window");
+
+ const chatcopy = template.cloneNode(true);
+
+ chatcopy.id =`chat-${e.contactId}`;
+ chatcopy.dataset.id=e.contactId;
+ chatcopy.dataset.name=e.contactName;
+ chatcopy.style.display= "none";
+
+
+
+ const backBtn = chatcopy.querySelector(".back2");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      chatcopy.style.display = "none";
+      document.getElementById("list").style.display = "flex";
+      chatOpen = false;
+    });
+  }
+
+
+ document.getElementById("content").append(chatcopy);
+
+
+   
     })
   
  
