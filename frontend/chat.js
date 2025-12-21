@@ -24,7 +24,7 @@ socket.on("receive_message", (data)=> {
    const chatDiv = document.getElementById(`chat-${data.from._id}`);
   if (!chatDiv) return;
 
-  addMsg2(data.text, chatDiv);
+  recieveMsg2(data.text, chatDiv);
 });
 
 
@@ -73,7 +73,7 @@ document.addEventListener("click", (e) => {
   const msgText = input.value.trim();
   if (!msgText) return;
 
-  recieveMsg2(msgText, chatDiv);
+  addMsg2(msgText, chatDiv);
   sendMessage(msgText, receiverId);
   input.value = "";
 });
